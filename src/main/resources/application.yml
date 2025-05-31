@@ -1,0 +1,37 @@
+server:
+  port: 8088
+spring:
+  data:
+    web:
+      pageable:
+        default-page-size: 10
+        one-indexed-parameters: true
+        page-parameter: page
+        size-parameter: size
+      sort:
+        sort-parameter: sort
+  datasource:
+    url: jdbc:mysql://localhost:3310/post?useSSL=false&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+  jpa:
+    show-sql: true
+    #nếu bạn có file schema.sql hoặc data.sql, Spring Boot sẽ tạo database trước khi khởi chạy Hibernate.
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        auto_quote_keyword: true
+      dialect: org.hibernate.dialect.MySQL8Dialect
+      format_sql: true
+    sql:
+      init:
+        mode: always
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+api:
+  prefix: api/v1
