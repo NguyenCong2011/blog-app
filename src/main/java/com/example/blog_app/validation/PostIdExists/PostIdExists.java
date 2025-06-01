@@ -22,7 +22,7 @@ import jakarta.validation.Payload;
  * @author Hardy Ferentschik
  */
 @Documented
-@Constraint(validatedBy = {PostIdExistsValidator.class})
+@Constraint(validatedBy = {PostIdExistsValidator.class})//class thực thi
 @Target({FIELD, PARAMETER,METHOD,ANNOTATION_TYPE,CONSTRUCTOR,TYPE_USE })
 @Retention(RUNTIME)
 public @interface PostIdExists {
