@@ -56,7 +56,7 @@ public class SecurityConfiguration {
             .csrf(AbstractHttpConfigurer::disable)
             .cors(customizer->{})
             .sessionManagement(customizer->customizer.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-            .authorizeHttpRequests(customize->customize.requestMatchers(HttpMethod.POST,"/api/v1/auth/register")
+            .authorizeHttpRequests(customize->customize.requestMatchers("/api/v1/auth/register","api/v1/posts/{id}")
                     .permitAll()
                     .anyRequest()
                     .authenticated()

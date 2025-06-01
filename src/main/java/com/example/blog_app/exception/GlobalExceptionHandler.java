@@ -1,5 +1,6 @@
 //package com.example.blog_app.exception;
 //
+//import lombok.AllArgsConstructor;
 //import org.springframework.http.HttpStatus;
 //import org.springframework.web.bind.MethodArgumentNotValidException;
 //import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -9,7 +10,7 @@
 //
 //import java.util.Date;
 //import java.util.LinkedHashMap;
-//
+//@AllArgsConstructor
 //@RestControllerAdvice
 //public class GlobalExceptionHandler {
 //

@@ -37,7 +37,7 @@ public class ErrorHandler extends ResponseEntityExceptionHandler {
   }
 
 
-  @ExceptionHandler({ConstraintViolationException.class})
+  @ExceptionHandler({ConstraintViolationException.class})///cái này khi nó in raở log này
   public ResponseEntity<Object> ConstraintViolationException(
           ConstraintViolationException exception){
     var message = "du lieu khong hop le";
